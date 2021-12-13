@@ -118,10 +118,14 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
+                android:clickable="true"
+
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/layoutContacts"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                android:focusable="true">
+
 
                 <ImageView
                     android:layout_width="100dp"
@@ -129,7 +133,9 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/games" />
+                    android:src="@drawable/games"
+
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -153,7 +159,9 @@
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -161,7 +169,8 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/test" />
+                    android:src="@drawable/test"
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -187,8 +196,8 @@
                 app:layout_constraintStart_toStartOf="parent"
 
                 app:layout_constraintTop_toBottomOf="@id/layoutContacts"
-
-                >
+                android:clickable="true"
+                android:focusable="true">
 
 
                 <ImageView
@@ -221,7 +230,9 @@
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layoutContacts">
+                app:layout_constraintTop_toBottomOf="@id/layoutContacts"
+                android:clickable="false">
+
 
                 <ImageView
                     android:layout_width="100dp"

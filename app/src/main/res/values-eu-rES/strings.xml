@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UT3Garcia</string>
+    <string name="hello">Kaixo</string>
+    <string name="search_elements">Elementuak Bilatu</string>
+    <string name="Games">Jolasak</string>
+    <string name="Contacts">Kontaktuak</string>
+    <string name="Maps">Mapak</string>
+    <string name="Health">Osasuna</string>
+    <string name="home">Etxea</string>
+    <string name="favorite">Gogokoena</string>
+    <string name="account">Kontua</string>
+    <string name="settings">Ezarpenak</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UT3Garcia</string>
+    <string name="hello">Hola</string>
+    <string name="search_elements">Buscar Elementos</string>
+    <string name="Games">Juegos</string>
+    <string name="Contacts">Contactos</string>
+    <string name="Maps">Mapas</string>
+    <string name="Health">Salud</string>
+    <string name="home">Inicio</string>
+    <string name="settings">Ajustes</string>
+    <string name="account">Cuenta</string>
+    <string name="favorite">Favorito</string>
+</resources>

@@ -2,4 +2,16 @@
     <string name="app_name">UT3Garcia</string>
     <string name="hello">Hello</string>
     <string name="search_elements">Search Elements</string>
+    <string name="john">John</string>
+    <string name="Games">Games</string>
+    <string name="Contacts">Contacts</string>
+    <string name="Maps">Maps</string>
+    <string name="Health">Health</string>
+    <string name="trending">TRENDING</string>
+    <string name="dummy_text">Lorem Ipsum is simply dummy text of printing this text essay</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="account">Account</string>
+    <string name="settings">Settings</string>
+
 </resources>

@@ -82,7 +82,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //Maps type Terrain
         mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
 
-        //Get the name and location of the museums using Retrofit
+        //Get the centroNombre and location of the museums using Retrofit
         //getMuseums();
 
         //Get the user location and center the map on the user location

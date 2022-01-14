@@ -17,7 +17,7 @@
         items for a single row of RecyclerView
         -->
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/centroNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name"
@@ -25,7 +25,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/email"
+            android:id="@+id/calleDireccion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email_email_com"
@@ -33,7 +33,14 @@
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/mobileNo"
+            android:id="@+id/poblacionLocalidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/e9999999999"
+            android:textColor="#000"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/numTelefono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/e9999999999"

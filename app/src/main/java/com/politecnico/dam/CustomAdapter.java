@@ -15,16 +15,18 @@ import java.util.ArrayList;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
-    ArrayList<String> personNames;
-    ArrayList<String> emailIds;
-    ArrayList<String> mobileNumbers;
+    ArrayList<String> centroNombres;
+    ArrayList<String> Direcciones;
+    ArrayList<String> Localidades;
+    ArrayList<Integer> Telefonos;
     Context context;
 
-    public CustomAdapter(Context context, ArrayList<String> personNames, ArrayList<String> emailIds, ArrayList<String> mobileNumbers) {
+    public CustomAdapter(Context context, ArrayList<String> centroNombres, ArrayList<String> Direcciones, ArrayList<String> Localidades,ArrayList<Integer> Telefono) {
         this.context = context;
-        this.personNames = personNames;
-        this.emailIds = emailIds;
-        this.mobileNumbers = mobileNumbers;
+        this.centroNombres = centroNombres;
+        this.Direcciones = Direcciones;
+        this.Localidades = Localidades;
+        this.Telefonos = Telefono;
     }
 
     @Override
@@ -36,17 +38,19 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         // set the data in items
-        holder.name.setText(personNames.get(position));
-        holder.email.setText(emailIds.get(position));
-        holder.mobileNo.setText(mobileNumbers.get(position));
+        holder.name.setText(centroNombres.get(position));
+        holder.direccion.setText(Direcciones.get(position));
+        holder.localidad.setText(Localidades.get(position));
+        holder.telefono.setText(String.valueOf(Telefonos.get(position)));
+
         // implement setOnClickListener event on item view.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // display a toast with person name on item click
-                Toast.makeText(context, personNames.get(position), Toast.LENGTH_SHORT).show();
+                // display a toast with person centroNombre on item click
+                Toast.makeText(context, String.valueOf(Telefonos.get(position)), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -55,19 +59,20 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @Override
     public int getItemCount() {
-        return personNames.size();
+        return centroNombres.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView name, email, mobileNo;// init the item view's
+        TextView name, direccion, localidad,telefono;// init the item view's
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
             // get the reference of item view's
-            name = (TextView) itemView.findViewById(R.id.name);
-            email = (TextView) itemView.findViewById(R.id.email);
-            mobileNo = (TextView) itemView.findViewById(R.id.mobileNo);
+            name = (TextView) itemView.findViewById(R.id.centroNombre);
+            direccion = (TextView) itemView.findViewById(R.id.calleDireccion);
+            localidad = (TextView) itemView.findViewById(R.id.poblacionLocalidad);
+            telefono =  (TextView) itemView.findViewById(R.id.numTelefono);
 
         }
     }

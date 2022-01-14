@@ -18,6 +18,10 @@ public class DashboardActivity extends AppCompatActivity {
         Intent intent = new Intent(DashboardActivity.this, MapsActivity.class);
         startActivity(intent);
     }
+    public void startSaludWindow(View view) {
+        Intent intent = new Intent(DashboardActivity.this, SaludActivity.class);
+        startActivity(intent);
+    }
 
 
 }

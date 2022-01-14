@@ -236,7 +236,10 @@
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layoutContacts"
-                android:clickable="false">
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="startSaludWindow"
+                >
 
 
                 <ImageView
@@ -245,7 +248,9 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/health" />
+                    android:src="@drawable/health"
+
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -254,6 +259,9 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp"
                     android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="startSaludWindow"
                     />
 
             </LinearLayout>

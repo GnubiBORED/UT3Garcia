@@ -9,9 +9,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by JoseThomas on 3/31/2016.
- */
+
 
 public class DbHelper extends SQLiteOpenHelper {
 

@@ -119,6 +119,7 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 android:clickable="true"
+                android:onClick="startGameWindow"
 
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintStart_toStartOf="parent"

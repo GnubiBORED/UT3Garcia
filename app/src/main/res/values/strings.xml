@@ -26,5 +26,7 @@
     <string name="e9999999999">e9999999999</string>
     <string name="email_email_com">email@email.com</string>
     <string name="name">Name</string>
+    <string name="randomImage">iMAGE</string>
+    <string name="str_next">send</string>
 
 </resources>

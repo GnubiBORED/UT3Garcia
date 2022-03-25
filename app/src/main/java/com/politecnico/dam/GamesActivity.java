@@ -33,6 +33,7 @@ public class GamesActivity extends AppCompatActivity {
     RadioButton rda, rdb, rdc;
     Button butNext;
     TextView questionid;
+    String isDemo;
 
 
     @Override
@@ -40,9 +41,15 @@ public class GamesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games);
         changeIMage();
-
-
-
+        Intent intent = getIntent();
+        try {
+            String str = intent.getStringExtra("isDemo");
+            if(str.equalsIgnoreCase("DEMO")){
+                isDemo = str;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
         //get all question from db
@@ -98,6 +105,7 @@ public class GamesActivity extends AppCompatActivity {
                 String result = "Fin";
                 Intent intent = new Intent(GamesActivity.this, GamesSecondActivity.class);
                 intent.putExtra("message", result);
+                intent.putExtra("isDemo",isDemo);
                 startActivity(intent);
 
 
@@ -106,6 +114,8 @@ public class GamesActivity extends AppCompatActivity {
             String result = "Correcto";
             Intent intent = new Intent(GamesActivity.this, GamesSecondActivity.class);
             intent.putExtra("message", result);
+            intent.putExtra("isDemo",isDemo);
+
             startActivity(intent);
 
 
@@ -115,6 +125,8 @@ public class GamesActivity extends AppCompatActivity {
 
             String result = "Incorrecto";
             Intent intent = new Intent(GamesActivity.this, GamesSecondActivity.class);
+            intent.putExtra("isDemo",isDemo);
+
             intent.putExtra("message", result);
             startActivity(intent);
 

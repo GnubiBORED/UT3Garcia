@@ -26,6 +26,12 @@ public class DashboardActivity extends AppCompatActivity {
         Intent intent = new Intent(DashboardActivity.this, GamesActivity.class);
         startActivity(intent);
     }
+    public void startDemoGameWindow(View view){
+        Intent intent = new Intent(DashboardActivity.this, GamesActivity.class);
+        intent.putExtra("isDemo", "DEMO");
+        startActivity(intent);
 
+    }
+//
 
 }

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class GamesSecondActivity extends AppCompatActivity {
+    String isDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,8 @@ public class GamesSecondActivity extends AppCompatActivity {
         Button btn4 = (Button)findViewById(R.id.button4);
         Intent intent = getIntent();
         String str = intent.getStringExtra("message");
+        isDemo = intent.getStringExtra("siDemo");
+
 
 
         if(str.equalsIgnoreCase("Correcto")){
@@ -46,8 +49,13 @@ public class GamesSecondActivity extends AppCompatActivity {
         }
 
 
+        }
 
-    }
+
+
+
+
+
     public void exit_game(View view){
         Intent intent = new Intent(GamesSecondActivity.this, DashboardActivity.class);
         startActivity(intent);
@@ -59,19 +67,24 @@ public class GamesSecondActivity extends AppCompatActivity {
         Intent intent = new Intent(GamesSecondActivity.this, GamesActivity.class);
         startActivity(intent);
     }
-    public void onbutton4click(View view){
-        Button btn4 = (Button)findViewById(R.id.button4);
-        if(btn4.getText().equals("next")){
-            next_question();
-        }
-        if(btn4.getText().equals("try again")){
-            try_again();
-
-        }
-        if(btn4.getText().equals("Fin")){
-            Intent intent = new Intent(GamesSecondActivity.this, GamesActivity.class);
+    public void onbutton4click(View view) {
+        Button btn4 = (Button) findViewById(R.id.button4);
+        if (isDemo.equalsIgnoreCase("DEMO")) {
+            Intent intent = new Intent(GamesSecondActivity.this, DashboardActivity.class);
             startActivity(intent);
+        }
 
+            if (btn4.getText().equals("next")) {
+                next_question();
+            }
+            if (btn4.getText().equals("try again")) {
+                try_again();
+
+            }
+            if (btn4.getText().equals("Fin")) {
+                Intent intent = new Intent(GamesSecondActivity.this, GamesActivity.class);
+                startActivity(intent);
+
+            }
         }
     }
-}

@@ -38,7 +38,9 @@
             android:padding="10dp"
             android:rotationX="57"
             android:rotationY="8"
-            tools:layout_editor_absoluteX="411dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/imageview1"
@@ -53,13 +55,14 @@
 
         <RadioGroup
             android:id="@+id/radioGroup1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/button1"
-            app:layout_constraintTop_toBottomOf="@+id/question"
             android:checked="false"
-            >
+            app:layout_constraintBottom_toTopOf="@+id/button1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question">
 
             <TextView
                 android:id="@+id/questionIdText"
@@ -104,23 +107,27 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="300dp"
+            android:layout_width="0dp"
             android:layout_height="200dp"
+            android:layout_marginStart="34dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="34dp" />
+            android:layout_marginEnd="77dp"
+            app:layout_constraintEnd_toStartOf="@+id/layoutHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="140dp"
             android:layout_marginBottom="16dp"
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge"
             app:layout_constraintBottom_toTopOf="@+id/radioGroup1"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            tools:layout_editor_absoluteX="40dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

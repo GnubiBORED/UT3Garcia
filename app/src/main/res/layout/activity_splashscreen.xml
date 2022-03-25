@@ -8,10 +8,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="399dp"
-        android:layout_height="710dp"
-        app:srcCompat="@drawable/logopolitecnico"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logopolitecnico" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
